@@ -2,14 +2,14 @@ import React from 'react';
 import Proptypes from 'prop-types';
 
 const SmallMovieCard = (props) => {
-  const {title, imgUrl} = props;
+  const {title, imgUrl, onTitleClick} = props;
   return (
     <article className="small-movie-card catalog__movies-card">
       <div className="small-movie-card__image">
         <img src={imgUrl} alt={title} width="280" height="175" />
       </div>
       <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" href="movie-page.html">{title}</a>
+        <a onClick={onTitleClick} className="small-movie-card__link" href="movie-page.html">{title}</a>
       </h3>
     </article>
   );
@@ -18,6 +18,7 @@ const SmallMovieCard = (props) => {
 SmallMovieCard.propTypes = {
   title: Proptypes.string.isRequired,
   imgUrl: Proptypes.string.isRequired,
+  onTitleClick: Proptypes.func,
 };
 
 export default SmallMovieCard;
