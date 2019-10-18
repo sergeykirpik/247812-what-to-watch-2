@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть» [![Build status][travis-image]][travis-url]
 
 * Студент: [Sergey Kirpik](https://up.htmlacademy.ru/react/2/user/247812).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Булах](https://htmlacademy.ru/profile/id1213123).
 
 ---
 
