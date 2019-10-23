@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import MainScreen from './main-screen.jsx';
+import MoviesList from './movies-list';
 
 import films from '../../mocks/films';
 
 it(`renders correctly`, () => {
   const tree = renderer.create(
-      <MainScreen
+      <MoviesList
         films={films} />
   ).toJSON();
   expect(tree).toMatchSnapshot();

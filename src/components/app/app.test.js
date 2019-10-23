@@ -2,11 +2,11 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import App from './app.jsx';
 
-import mockData from '../../data';
+import films from '../../mocks/films';
 
 it(`renders correctly`, () => {
   const tree = renderer
-    .create(<App films={mockData} />)
+    .create(<App films={films} />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

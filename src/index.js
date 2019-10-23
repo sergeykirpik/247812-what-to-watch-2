@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/app.jsx';
 
-import mockData from './data';
+import films from './mocks/films';
 
 ReactDOM.render(
-    <App films={mockData}/>,
+    <App films={films}/>,
     document.querySelector(`#root`)
 );

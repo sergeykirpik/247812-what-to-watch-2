@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SmallMovieCard from '../small-movie-card/small-movie-card.jsx';
+import MoviesList from '../movies-list/movies-list.jsx';
 
 const MainScreen = ({films}) => {
   return (
@@ -97,13 +97,7 @@ const MainScreen = ({films}) => {
             </li>
           </ul>
 
-          <div className="catalog__movies-list">
-
-            {films.map((it, idx) => (
-              <SmallMovieCard key={idx} title={it.title} imgUrl={it.imgUrl} />
-            ))}
-
-          </div>
+          <MoviesList films={films} />
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -130,6 +124,7 @@ const MainScreen = ({films}) => {
 
 MainScreen.propTypes = {
   films: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     imgUrl: PropTypes.string.isRequired,
   })),
