@@ -126,7 +126,7 @@ MainScreen.propTypes = {
   films: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired,
+    previewImage: PropTypes.string.isRequired,
   })),
 };
 
