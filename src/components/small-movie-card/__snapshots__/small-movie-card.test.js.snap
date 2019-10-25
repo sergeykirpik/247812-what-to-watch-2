@@ -3,14 +3,15 @@
 exports[`renders correctly 1`] = `
 <article
   className="small-movie-card catalog__movies-card"
+  onMouseEnter={[Function]}
 >
   <div
     className="small-movie-card__image"
   >
     <img
-      alt="Midnight Special"
+      alt="Fantastic Beasts: The Crimes of Grindelwald"
       height="175"
-      src="img/midnight-special.jpg"
+      src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
       width="280"
     />
   </div>
@@ -21,7 +22,7 @@ exports[`renders correctly 1`] = `
       className="small-movie-card__link"
       href="movie-page.html"
     >
-      Midnight Special
+      Fantastic Beasts: The Crimes of Grindelwald
     </a>
   </h3>
 </article>
