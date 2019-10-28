@@ -6,6 +6,7 @@ exports[`renders correctly 1`] = `
 >
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -23,7 +24,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?1"
       >
         Fantastic Beasts: The Crimes of Grindelwald
       </a>
@@ -31,6 +32,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -48,7 +50,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?2"
       >
         Bohemian Rhapsody
       </a>
@@ -56,6 +58,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -73,7 +76,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?3"
       >
         Macbeth
       </a>
@@ -81,6 +84,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -98,7 +102,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?4"
       >
         Aviator
       </a>
@@ -106,6 +110,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -123,7 +128,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?5"
       >
         We need to talk about Kevin
       </a>
@@ -131,6 +136,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -148,7 +154,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?6"
       >
         What We Do in the Shadows
       </a>
@@ -156,6 +162,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -173,7 +180,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?7"
       >
         Revenant
       </a>
@@ -181,6 +188,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -198,7 +206,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?8"
       >
         Johnny English
       </a>
@@ -206,6 +214,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -223,7 +232,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?9"
       >
         Shutter Island
       </a>
@@ -231,6 +240,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -248,7 +258,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?10"
       >
         Pulp Fiction
       </a>
@@ -256,6 +266,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -273,7 +284,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?11"
       >
         No Country for Old Men
       </a>
@@ -281,6 +292,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -298,7 +310,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?12"
       >
         Snatch
       </a>
@@ -306,6 +318,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -323,7 +336,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?13"
       >
         Moonrise Kingdom
       </a>
@@ -331,6 +344,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -348,7 +362,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?14"
       >
         Seven Years in Tibet
       </a>
@@ -356,6 +370,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -373,7 +388,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?15"
       >
         Midnight Special
       </a>
@@ -381,6 +396,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -398,7 +414,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?16"
       >
         War of the Worlds
       </a>
@@ -406,6 +422,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -423,7 +440,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?17"
       >
         Dardjeeling Limited
       </a>
@@ -431,6 +448,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -448,7 +466,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?18"
       >
         Orlando
       </a>
@@ -456,6 +474,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -473,7 +492,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?19"
       >
         Mindhunter
       </a>
@@ -481,6 +500,7 @@ exports[`renders correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -498,7 +518,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/details?20"
       >
         Midnight Special
       </a>
