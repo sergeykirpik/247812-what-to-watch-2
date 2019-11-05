@@ -261,6 +261,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -278,6 +279,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?1"
+              onClick={[Function]}
             >
               Fantastic Beasts: The Crimes of Grindelwald
             </a>
@@ -287,6 +289,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -304,6 +307,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?2"
+              onClick={[Function]}
             >
               Bohemian Rhapsody
             </a>
@@ -313,6 +317,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -330,6 +335,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?3"
+              onClick={[Function]}
             >
               Macbeth
             </a>
@@ -339,6 +345,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -356,6 +363,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?4"
+              onClick={[Function]}
             >
               Aviator
             </a>
@@ -365,6 +373,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -382,6 +391,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?5"
+              onClick={[Function]}
             >
               We need to talk about Kevin
             </a>
@@ -391,6 +401,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -408,6 +419,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?6"
+              onClick={[Function]}
             >
               What We Do in the Shadows
             </a>
@@ -417,6 +429,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -434,6 +447,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?7"
+              onClick={[Function]}
             >
               Revenant
             </a>
@@ -443,6 +457,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -460,6 +475,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?8"
+              onClick={[Function]}
             >
               Johnny English
             </a>
@@ -469,6 +485,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -486,6 +503,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?9"
+              onClick={[Function]}
             >
               Shutter Island
             </a>
@@ -495,6 +513,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -512,6 +531,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?10"
+              onClick={[Function]}
             >
               Pulp Fiction
             </a>
@@ -521,6 +541,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -538,6 +559,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?11"
+              onClick={[Function]}
             >
               No Country for Old Men
             </a>
@@ -547,6 +569,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -564,6 +587,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?12"
+              onClick={[Function]}
             >
               Snatch
             </a>
@@ -573,6 +597,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -590,6 +615,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?13"
+              onClick={[Function]}
             >
               Moonrise Kingdom
             </a>
@@ -599,6 +625,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -616,6 +643,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?14"
+              onClick={[Function]}
             >
               Seven Years in Tibet
             </a>
@@ -625,6 +653,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -642,6 +671,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?15"
+              onClick={[Function]}
             >
               Midnight Special
             </a>
@@ -651,6 +681,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -668,6 +699,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?16"
+              onClick={[Function]}
             >
               War of the Worlds
             </a>
@@ -677,6 +709,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -694,6 +727,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?17"
+              onClick={[Function]}
             >
               Dardjeeling Limited
             </a>
@@ -703,6 +737,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -720,6 +755,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?18"
+              onClick={[Function]}
             >
               Orlando
             </a>
@@ -729,6 +765,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -746,6 +783,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?19"
+              onClick={[Function]}
             >
               Mindhunter
             </a>
@@ -755,6 +793,7 @@ Array [
           className="small-movie-card catalog__movies-card"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -772,6 +811,7 @@ Array [
             <a
               className="small-movie-card__link"
               href="/details?20"
+              onClick={[Function]}
             >
               Midnight Special
             </a>

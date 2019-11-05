@@ -8,6 +8,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -25,6 +26,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?1"
+        onClick={[Function]}
       >
         Fantastic Beasts: The Crimes of Grindelwald
       </a>
@@ -34,6 +36,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -51,6 +54,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?2"
+        onClick={[Function]}
       >
         Bohemian Rhapsody
       </a>
@@ -60,6 +64,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -77,6 +82,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?3"
+        onClick={[Function]}
       >
         Macbeth
       </a>
@@ -86,6 +92,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -103,6 +110,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?4"
+        onClick={[Function]}
       >
         Aviator
       </a>
@@ -112,6 +120,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -129,6 +138,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?5"
+        onClick={[Function]}
       >
         We need to talk about Kevin
       </a>
@@ -138,6 +148,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -155,6 +166,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?6"
+        onClick={[Function]}
       >
         What We Do in the Shadows
       </a>
@@ -164,6 +176,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -181,6 +194,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?7"
+        onClick={[Function]}
       >
         Revenant
       </a>
@@ -190,6 +204,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -207,6 +222,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?8"
+        onClick={[Function]}
       >
         Johnny English
       </a>
@@ -216,6 +232,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -233,6 +250,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?9"
+        onClick={[Function]}
       >
         Shutter Island
       </a>
@@ -242,6 +260,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -259,6 +278,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?10"
+        onClick={[Function]}
       >
         Pulp Fiction
       </a>
@@ -268,6 +288,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -285,6 +306,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?11"
+        onClick={[Function]}
       >
         No Country for Old Men
       </a>
@@ -294,6 +316,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -311,6 +334,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?12"
+        onClick={[Function]}
       >
         Snatch
       </a>
@@ -320,6 +344,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -337,6 +362,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?13"
+        onClick={[Function]}
       >
         Moonrise Kingdom
       </a>
@@ -346,6 +372,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -363,6 +390,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?14"
+        onClick={[Function]}
       >
         Seven Years in Tibet
       </a>
@@ -372,6 +400,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -389,6 +418,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?15"
+        onClick={[Function]}
       >
         Midnight Special
       </a>
@@ -398,6 +428,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -415,6 +446,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?16"
+        onClick={[Function]}
       >
         War of the Worlds
       </a>
@@ -424,6 +456,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -441,6 +474,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?17"
+        onClick={[Function]}
       >
         Dardjeeling Limited
       </a>
@@ -450,6 +484,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -467,6 +502,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?18"
+        onClick={[Function]}
       >
         Orlando
       </a>
@@ -476,6 +512,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -493,6 +530,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?19"
+        onClick={[Function]}
       >
         Mindhunter
       </a>
@@ -502,6 +540,7 @@ exports[`renders correctly 1`] = `
     className="small-movie-card catalog__movies-card"
     onClick={[Function]}
     onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -519,6 +558,7 @@ exports[`renders correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/details?20"
+        onClick={[Function]}
       >
         Midnight Special
       </a>

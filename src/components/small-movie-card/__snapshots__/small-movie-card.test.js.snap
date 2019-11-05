@@ -5,6 +5,7 @@ exports[`renders correctly 1`] = `
   className="small-movie-card catalog__movies-card"
   onClick={[Function]}
   onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
 >
   <div
     className="small-movie-card__image"
@@ -22,6 +23,7 @@ exports[`renders correctly 1`] = `
     <a
       className="small-movie-card__link"
       href="/details?1"
+      onClick={[Function]}
     >
       Fantastic Beasts: The Crimes of Grindelwald
     </a>
