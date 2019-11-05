@@ -27,7 +27,8 @@ class SmallMovieCard extends React.PureComponent {
       <article className="small-movie-card catalog__movies-card"
         onMouseEnter={() => this._handleMouseEnter(film)}
         onMouseLeave={() => this._handleMouseLeave()}
-        onClick={handleClick}>
+        onClick={handleClick}
+        >
 
         {!isPlaying ? (
           <React.Fragment>
