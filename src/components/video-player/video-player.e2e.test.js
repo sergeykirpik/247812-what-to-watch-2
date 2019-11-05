@@ -12,4 +12,7 @@ it(`has two states: isPlaying = (true|false)`, () => {
       <VideoPlayer isPlaying={false} />
   );
   expect(wrapper.state(`isPlaying`)).toBe(false);
+
+  wrapper.setState({isPlaying: true});
+  expect(wrapper.state(`isPlaying`)).toBe(true);
 });

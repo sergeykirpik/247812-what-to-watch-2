@@ -16,7 +16,6 @@ class VideoPlayer extends React.PureComponent {
     const {width, height, src, poster, muted} = this.props;
     return (
       <video
-        onClick={() => this.setState(({isPlaying}) => ({isPlaying: !isPlaying}))}
         ref={this._videoRef}
         width={width}
         height={height}
@@ -37,6 +36,9 @@ class VideoPlayer extends React.PureComponent {
 
   _play() {
     const video = this._videoRef.current;
+    if (!video) {
+      return;
+    }
     const playPromise = video.play();
     if (playPromise) {
       playPromise.catch(() => {});
@@ -45,6 +47,9 @@ class VideoPlayer extends React.PureComponent {
 
   _pause() {
     const video = this._videoRef.current;
+    if (!video) {
+      return;
+    }
     video.pause();
   }
 
