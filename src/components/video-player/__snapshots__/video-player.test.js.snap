@@ -5,7 +5,6 @@ exports[`renders correctly 1`] = `
   height={175}
   muted={false}
   poster="some_poster_image"
-  src="some_preview_link"
   width={280}
 />
 `;

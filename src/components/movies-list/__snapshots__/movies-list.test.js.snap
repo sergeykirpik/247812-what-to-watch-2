@@ -13,11 +13,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Fantastic Beasts: The Crimes of Grindelwald"
-        height="175"
-        src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -41,11 +41,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Bohemian Rhapsody"
-        height="175"
-        src="img/bohemian-rhapsody.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/bohemian-rhapsody.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -69,11 +69,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Macbeth"
-        height="175"
-        src="img/macbeth.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/macbeth.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -97,11 +97,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Aviator"
-        height="175"
-        src="img/aviator.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/aviator.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -125,11 +125,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="We need to talk about Kevin"
-        height="175"
-        src="img/we-need-to-talk-about-kevin.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/we-need-to-talk-about-kevin.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -153,11 +153,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="What We Do in the Shadows"
-        height="175"
-        src="img/what-we-do-in-the-shadows.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/what-we-do-in-the-shadows.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -181,11 +181,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Revenant"
-        height="175"
-        src="img/revenant.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/revenant.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -209,11 +209,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Johnny English"
-        height="175"
-        src="img/johnny-english.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/johnny-english.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -237,11 +237,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Shutter Island"
-        height="175"
-        src="img/shutter-island.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/shutter-island.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -265,11 +265,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Pulp Fiction"
-        height="175"
-        src="img/pulp-fiction.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/pulp-fiction.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -293,11 +293,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="No Country for Old Men"
-        height="175"
-        src="img/no-country-for-old-men.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/no-country-for-old-men.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -321,11 +321,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Snatch"
-        height="175"
-        src="img/snatch.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/snatch.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -349,11 +349,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Moonrise Kingdom"
-        height="175"
-        src="img/moonrise-kingdom.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/moonrise-kingdom.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -377,11 +377,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Seven Years in Tibet"
-        height="175"
-        src="img/seven-years-in-tibet.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/seven-years-in-tibet.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -405,11 +405,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Midnight Special"
-        height="175"
-        src="img/midnight-special.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/midnight-special.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -433,11 +433,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="War of the Worlds"
-        height="175"
-        src="img/war-of-the-worlds.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/war-of-the-worlds.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -461,11 +461,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Dardjeeling Limited"
-        height="175"
-        src="img/dardjeeling-limited.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/dardjeeling-limited.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -489,11 +489,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Orlando"
-        height="175"
-        src="img/orlando.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/orlando.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -517,11 +517,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Mindhunter"
-        height="175"
-        src="img/mindhunter.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/mindhunter.jpg"
+        width={280}
       />
     </div>
     <h3
@@ -545,11 +545,11 @@ exports[`renders correctly 1`] = `
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Midnight Special"
-        height="175"
-        src="img/midnight-special.jpg"
-        width="280"
+      <video
+        height={175}
+        muted={true}
+        poster="img/midnight-special.jpg"
+        width={280}
       />
     </div>
     <h3
