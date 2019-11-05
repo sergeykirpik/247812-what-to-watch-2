@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class VideoPlayer extends React.PureComponent {
+
   constructor(props) {
     super(props);
 
@@ -19,7 +20,6 @@ class VideoPlayer extends React.PureComponent {
         ref={this._videoRef}
         width={width}
         height={height}
-        src={src}
         poster={poster}
         muted={muted}
       />
@@ -39,6 +39,7 @@ class VideoPlayer extends React.PureComponent {
     if (!video) {
       return;
     }
+    video.src = this.props.src;
     const playPromise = video.play();
     if (playPromise) {
       playPromise.catch(() => {});
@@ -51,6 +52,7 @@ class VideoPlayer extends React.PureComponent {
       return;
     }
     video.pause();
+    video.src = ``;
   }
 
   _handleStateUpdate() {

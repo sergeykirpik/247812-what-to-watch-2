@@ -29,25 +29,25 @@ class SmallMovieCard extends React.PureComponent {
         onMouseLeave={() => this._handleMouseLeave()}
         onClick={handleClick}>
 
-        {!isPlaying ? (
-          <React.Fragment>
-            <div className="small-movie-card__image">
-              <img src={previewImage} alt={title} width="280" height="175" />
-            </div>
+        <React.Fragment>
+          <div className="small-movie-card__image">
+            {/* <img src={previewImage} alt={title} width="280" height="175" /> */}
+            <VideoPlayer
+              onMouseLeave={() => this._handleMouseLeave()}
+              width={280}
+              height={175}
+              src={previewVideoLink}
+              poster={previewImage}
+              muted={muted}
+              isPlaying={isPlaying}
+              key={isPlaying} />
+          </div>
+          {!isPlaying && (
             <h3 className="small-movie-card__title">
               <a onClick={onTitleClick} className="small-movie-card__link" href={detailsUrl}>{title}</a>
             </h3>
-          </React.Fragment>
-        ) : (
-          <VideoPlayer
-            onMouseLeave={() => this._handleMouseLeave()}
-            width={280}
-            height={175}
-            src={previewVideoLink}
-            poster={previewImage}
-            muted={muted}
-            isPlaying={isPlaying} />
-        )}
+          )}
+        </React.Fragment>
 
       </article>
     );
