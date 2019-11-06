@@ -1,14 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const formatRuntime = (runTime) => {
-  const h = Math.floor(runTime / 60);
-  const m = runTime - h * 60;
-
-  return `${h}h ${m}m`;
-};
+import Tabs from '../tabs/tabs.jsx';
 
 const MoviePageDetails = (props) => {
+  const {film} = props;
   const {
     backgroundColor,
     backgroundImage,
@@ -16,10 +11,7 @@ const MoviePageDetails = (props) => {
     genre,
     released,
     posterImage,
-    director,
-    starring,
-    runTime,
-  } = props.film;
+  } = film;
   return <>
     <section className="movie-card movie-card--full" style={{backgroundColor}}>
       <div className="movie-card__hero">
@@ -79,54 +71,7 @@ const MoviePageDetails = (props) => {
           </div>
 
           <div className="movie-card__desc">
-            <nav className="movie-nav movie-card__nav">
-              <ul className="movie-nav__list">
-                <li className="movie-nav__item">
-                  <a href="#" className="movie-nav__link">Overview</a>
-                </li>
-                <li className="movie-nav__item movie-nav__item--active">
-                  <a href="#" className="movie-nav__link">Details</a>
-                </li>
-                <li className="movie-nav__item">
-                  <a href="#" className="movie-nav__link">Reviews</a>
-                </li>
-              </ul>
-            </nav>
-
-            <div className="movie-card__text movie-card__row">
-              <div className="movie-card__text-col">
-                <p className="movie-card__details-item">
-                  <strong className="movie-card__details-name">Director</strong>
-                  <span className="movie-card__details-value">{director}</span>
-                </p>
-                <p className="movie-card__details-item">
-                  <strong className="movie-card__details-name">Starring</strong>
-                  <span className="movie-card__details-value">
-                    {starring.map((it, idx) => {
-                      const notLast = idx < starring.length - 1;
-                      const coma = notLast ? `,` : ``;
-                      const br = notLast ? <br/> : null;
-                      return <React.Fragment key={idx}>{it + coma}{br}</React.Fragment>;
-                    })}
-                  </span>
-                </p>
-              </div>
-
-              <div className="movie-card__text-col">
-                <p className="movie-card__details-item">
-                  <strong className="movie-card__details-name">Run Time</strong>
-                  <span className="movie-card__details-value">{formatRuntime(runTime)}</span>
-                </p>
-                <p className="movie-card__details-item">
-                  <strong className="movie-card__details-name">Genre</strong>
-                  <span className="movie-card__details-value">{genre}</span>
-                </p>
-                <p className="movie-card__details-item">
-                  <strong className="movie-card__details-name">Released</strong>
-                  <span className="movie-card__details-value">{released}</span>
-                </p>
-              </div>
-            </div>
+            <Tabs film={film} />
           </div>
         </div>
       </div>
