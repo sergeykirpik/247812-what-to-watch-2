@@ -54,7 +54,7 @@ class Tabs extends React.PureComponent {
     super(props);
 
     this.state = {
-      currentTab: TAB_OVERVIEW,
+      currentTab: TAB_DETAILS,
     };
   }
 
@@ -66,7 +66,7 @@ class Tabs extends React.PureComponent {
           <ul className="movie-nav__list">
             {tabs.map((tab) => (
               <li key={tab}
-                className={`movie-nav__item movie-nav__item${tab === currentTab ? `--active` : ``}`}>
+                className={`movie-nav__item${tab === currentTab ? ` movie-nav__item--active` : ``}`}>
                 <a href="#"
                   className="movie-nav__link"
                   onClick={(e) => {
