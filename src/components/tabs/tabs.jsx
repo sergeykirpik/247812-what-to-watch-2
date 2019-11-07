@@ -37,8 +37,9 @@ const formatDate = (date) => {
   return formatter.format(new Date(date));
 };
 
-const convertToISODate = () => {
-  return `2016-12-24`;
+const convertToISODate = (date) => {
+
+  return new Date(date).toISOString();
 };
 
 const formatRating = (rating) => {
