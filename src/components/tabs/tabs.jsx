@@ -79,26 +79,26 @@ class Tabs extends React.PureComponent {
             ))}
           </ul>
         </nav>
-        {this._content}
+        {this._tabContent}
 
       </React.Fragment>
     );
   }
 
-  get _content() {
+  get _tabContent() {
     const {currentTab} = this.state;
     switch (currentTab) {
       case TAB_OVERVIEW:
-        return this._overviewContent;
+        return this._overviewTabContent;
       case TAB_DETAILS:
-        return this._detailsContent;
+        return this._detailsTabContent;
       case TAB_REVIEWS:
-        return this._reviewsContent;
+        return this._reviewsTabContent;
     }
     return null;
   }
 
-  get _overviewContent() {
+  get _overviewTabContent() {
     const {film} = this.props;
     const {
       rating,
@@ -130,7 +130,7 @@ class Tabs extends React.PureComponent {
     );
   }
 
-  get _detailsContent() {
+  get _detailsTabContent() {
     const {
       genre,
       released,
@@ -174,45 +174,46 @@ class Tabs extends React.PureComponent {
           </p>
         </div>
       </div>
-
     );
   }
 
-  get _reviewsContent() {
+  get _reviewsTabContent() {
     const {reviews} = this.props.film;
 
     return (
-      <React.Fragment>
-        <div className="movie-card__reviews movie-card__row">
-          <div className="movie-card__reviews-col">
+      <div className="movie-card__reviews movie-card__row">
 
-            {reviews.map(({id, comment, user, date, rating}, idx) => (
-              <div key={id}
-                className="review"
-                style={{borderBottom: (idx < reviews.length - 1) ? `2px solid rgba(255,255,255,.24)` : `none`}}>
-                <blockquote className="review__quote">
-                  <p className="review__text">
-                    {comment}
-                  </p>
-                  <footer className="review__details">
-                    <cite className="review__author">{user.name}</cite>
-                    <time className="review__date" dateTime={convertToISODate(date)}>
-                      {formatDate(date)}
-                    </time>
-                  </footer>
-                </blockquote>
-
-                <div className="review__rating">{formatRating(rating)}</div>
-              </div>
-            ))}
-
-          </div>
-          <div className="movie-card__reviews-col">
-
-          </div>
+        <div className="movie-card__reviews-col">
+          {this._getReviewsColumnContent(reviews.filter((el, idx) => idx % 2 === 0))}
         </div>
-      </React.Fragment>
+        <div className="movie-card__reviews-col">
+          {this._getReviewsColumnContent(reviews.filter((el, idx) => idx % 2 === 1))}
+        </div>
+
+      </div>
     );
+  }
+
+  _getReviewsColumnContent(reviews) {
+    return reviews.map(({id, comment, user, date, rating}, idx) => (
+      <div key={id}
+        className="review"
+        style={{borderBottom: (idx < reviews.length - 1) ? `2px solid rgba(255,255,255,.24)` : `none`}}>
+        <blockquote className="review__quote">
+          <p className="review__text">
+            {comment}
+          </p>
+          <footer className="review__details">
+            <cite className="review__author">{user.name}</cite>
+            <time className="review__date" dateTime={convertToISODate(date)}>
+              {formatDate(date)}
+            </time>
+          </footer>
+        </blockquote>
+
+        <div className="review__rating">{formatRating(rating)}</div>
+      </div>
+    ));
   }
 
   _selectTab(tab) {
@@ -220,6 +221,7 @@ class Tabs extends React.PureComponent {
       currentTab: tab,
     });
   }
+
 }
 
 const filmPropType = {

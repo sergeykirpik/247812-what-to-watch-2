@@ -9,9 +9,12 @@ const App = (props) => {
     case `/`:
       return <MainScreen films={films} />;
     case `/details`:
-      const id = parseInt(location.search.slice(1), 10);
-      const film = films.find((it) => it.id === id);
-      return <MoviePageDetails film={film} />;
+      const filmId = parseInt(location.search.slice(1), 10);
+      const film = films.find((it) => it.id === filmId);
+      const moreLikeThisFilms = films.filter(({genre, id}) => genre === film.genre && id !== film.id).slice(0, 4);
+      return <MoviePageDetails
+        film={film}
+        moreLikeThisFilms={moreLikeThisFilms} />;
   }
   return null;
 };
