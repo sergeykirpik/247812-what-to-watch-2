@@ -11,8 +11,19 @@ it(`has two states: isPlaying = (true|false)`, () => {
   const wrapper = shallow(
       <VideoPlayer isPlaying={false} />
   );
-  expect(wrapper.state(`isPlaying`)).toBe(false);
 
-  wrapper.setState({isPlaying: true});
-  expect(wrapper.state(`isPlaying`)).toBe(true);
+  const play = jest.fn();
+  const pause = jest.fn();
+
+  wrapper.instance()._play = play;
+  wrapper.instance()._pause = pause;
+
+  wrapper.setProps({isPlaying: false});
+  wrapper.update();
+  expect(pause).toHaveBeenCalled();
+
+  wrapper.setProps({isPlaying: true});
+  wrapper.update();
+  expect(play).toHaveBeenCalled();
+
 });

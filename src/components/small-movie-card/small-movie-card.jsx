@@ -11,29 +11,31 @@ class SmallMovieCard extends React.PureComponent {
     this.state = {
       isPlaying: false,
     };
+
+    this._handleMouseEnter = this._handleMouseEnter.bind(this);
+    this._handleMouseLeave = this._handleMouseLeave.bind(this);
+    this._handleMouseClick = this._handleMouseClick.bind(this);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._timerId);
   }
 
   render() {
     const {isPlaying} = this.state;
     const {muted, film, onTitleClick} = this.props;
-    const {title, previewImage, id, previewVideoLink} = film;
-    const detailsUrl = `/details?${id}`;
-
-    const handleClick = () => {
-      location.assign(detailsUrl);
-    };
+    const {title, previewImage, previewVideoLink} = film;
 
     return (
       <article className="small-movie-card catalog__movies-card"
-        onMouseEnter={() => this._handleMouseEnter(film)}
-        onMouseLeave={() => this._handleMouseLeave()}
-        onClick={handleClick}>
+        onMouseEnter={this._handleMouseEnter}
+        onMouseLeave={this._handleMouseLeave}
+        onClick={this._handleMouseClick}>
 
         <React.Fragment>
           <div className="small-movie-card__image">
-            {/* <img src={previewImage} alt={title} width="280" height="175" /> */}
             <VideoPlayer
-              onMouseLeave={() => this._handleMouseLeave()}
+              onMouseLeave={this._handleMouseLeave}
               width={280}
               height={175}
               src={previewVideoLink}
@@ -44,7 +46,7 @@ class SmallMovieCard extends React.PureComponent {
           </div>
           {!isPlaying && (
             <h3 className="small-movie-card__title">
-              <a onClick={onTitleClick} className="small-movie-card__link" href={detailsUrl}>{title}</a>
+              <a onClick={onTitleClick} className="small-movie-card__link" href={this._detailsUrl}>{title}</a>
             </h3>
           )}
         </React.Fragment>
@@ -53,10 +55,11 @@ class SmallMovieCard extends React.PureComponent {
     );
   }
 
-  _handleMouseEnter(film) {
-    this.props.onMouseEnter(film);
-    this._timerHandler = setTimeout(() => {
-      this._timerHandler = null;
+  _handleMouseEnter() {
+    const {onMouseEnter, film} = this.props;
+    onMouseEnter(film);
+    this._timerId = setTimeout(() => {
+      this._timerId = null;
       this.setState({
         isPlaying: true,
       });
@@ -64,13 +67,20 @@ class SmallMovieCard extends React.PureComponent {
   }
 
   _handleMouseLeave() {
-    clearTimeout(this._timerHandler);
-    this._timerHandler = null;
+    clearTimeout(this._timerId);
+    this._timerId = null;
     this.setState({
       isPlaying: false,
     });
   }
 
+  _handleMouseClick() {
+    location.assign(this._detailsUrl);
+  }
+
+  get _detailsUrl() {
+    return `/details?${this.props.film.id}`;
+  }
 }
 
 SmallMovieCard.defaultProps = {
