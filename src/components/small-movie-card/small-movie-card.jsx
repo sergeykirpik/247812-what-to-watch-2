@@ -1,36 +1,105 @@
 import React from 'react';
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
+import VideoPlayer from '../video-player/video-player.jsx';
 
-const SmallMovieCard = (props) => {
-  const {film, onTitleClick, onMouseEnter} = props;
-  const {title, previewImage, id} = film;
-  const detailsUrl = `/details?${id}`;
+const PREVIEW_START_TIMEOUT = 1000;
 
-  const handleClick = () => {
-    location.assign(detailsUrl);
-  };
+class SmallMovieCard extends React.PureComponent {
+  constructor(props) {
+    super(props);
 
-  return (
-    <article className="small-movie-card catalog__movies-card"
-      onMouseEnter={() => onMouseEnter(film)} onClick={handleClick}>
-      <div className="small-movie-card__image">
-        <img src={previewImage} alt={title} width="280" height="175" />
-      </div>
-      <h3 className="small-movie-card__title">
-        <a onClick={onTitleClick} className="small-movie-card__link" href={detailsUrl}>{title}</a>
-      </h3>
-    </article>
-  );
+    this.state = {
+      isPlaying: false,
+    };
+
+    this._handleMouseEnter = this._handleMouseEnter.bind(this);
+    this._handleMouseLeave = this._handleMouseLeave.bind(this);
+    this._handleMouseClick = this._handleMouseClick.bind(this);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._timerId);
+  }
+
+  render() {
+    const {isPlaying} = this.state;
+    const {muted, film, onTitleClick} = this.props;
+    const {title, previewImage, previewVideoLink} = film;
+
+    return (
+      <article className="small-movie-card catalog__movies-card"
+        onMouseEnter={this._handleMouseEnter}
+        onMouseLeave={this._handleMouseLeave}
+        onClick={this._handleMouseClick}>
+
+        <React.Fragment>
+          <div className="small-movie-card__image">
+            <VideoPlayer
+              onMouseLeave={this._handleMouseLeave}
+              width={280}
+              height={175}
+              src={previewVideoLink}
+              poster={previewImage}
+              muted={muted}
+              isPlaying={isPlaying}
+              key={isPlaying} />
+          </div>
+          {!isPlaying && (
+            <h3 className="small-movie-card__title">
+              <a onClick={onTitleClick} className="small-movie-card__link" href={this._detailsUrl}>{title}</a>
+            </h3>
+          )}
+        </React.Fragment>
+
+      </article>
+    );
+  }
+
+  _handleMouseEnter() {
+    const {onMouseEnter, film} = this.props;
+    onMouseEnter(film);
+    this._timerId = setTimeout(() => {
+      this._timerId = null;
+      this.setState({
+        isPlaying: true,
+      });
+    }, PREVIEW_START_TIMEOUT);
+  }
+
+  _handleMouseLeave() {
+    clearTimeout(this._timerId);
+    this._timerId = null;
+    this.setState({
+      isPlaying: false,
+    });
+  }
+
+  _handleMouseClick() {
+    location.assign(this._detailsUrl);
+  }
+
+  get _detailsUrl() {
+    return `/details?${this.props.film.id}`;
+  }
+}
+
+SmallMovieCard.defaultProps = {
+  muted: true,
+  previewVideoLink: ``,
+  onTitleClick: () => {},
+  onMouseEnter: () => {},
 };
 
 SmallMovieCard.propTypes = {
-  film: Proptypes.shape({
-    id: Proptypes.number.isRequired,
-    title: Proptypes.string.isRequired,
-    previewImage: Proptypes.string.isRequired
+  film: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    previewImage: PropTypes.string.isRequired,
+    previewVideoLink: PropTypes.string,
   }).isRequired,
-  onTitleClick: Proptypes.func,
-  onMouseEnter: Proptypes.func,
+  muted: PropTypes.bool.isRequired,
+  onTitleClick: PropTypes.func,
+  onMouseEnter: PropTypes.func,
 };
 
 export default SmallMovieCard;

@@ -20,7 +20,32 @@ const films = [
     id: 1,
     isFavorite: false,
     videoLink: `http://media.xiph.org/mango/tears_of_steel_1080p.webm`,
-    previewVideoLink: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    previewVideoLink: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+
+    reviews: [
+      {
+        "id": 1,
+        "user": {
+          "id": 16,
+          "name": `Mollie`
+        },
+        "rating": 5,
+        "comment": `I love this movie. This film is a milestone in cinematography. Great Immersive camera-work. This film is an experience and i has already seen it 4 times and I only see more quality of the film.`,
+        "date": `2019-10-18T19:28:35.599Z`
+      },
+      {
+        "id": 2,
+        "user": {
+          "id": 18,
+          "name": `Sophie`
+        },
+        "rating": 4,
+        "comment": `Unfortunately we don't have a reliable way to tell the true ratings of a movie.`,
+        "date": `2019-10-08T19:28:35.599Z`
+      }
+    ]
+
+
   },
   {
     title: `Aviator`,
@@ -43,7 +68,30 @@ const films = [
     id: 2,
     isFavorite: false,
     videoLink: `http://media.xiph.org/mango/tears_of_steel_1080p.webm`,
-    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+
+    reviews: [
+      {
+        "id": 1,
+        "user": {
+          "id": 16,
+          "name": `Mollie`
+        },
+        "rating": 3,
+        "comment": `Poised to be an instant classic, almost everything about this film is phenomenal - the acting, the cinematography, the discography, etc.`,
+        "date": `2019-10-14T19:28:35.599Z`
+      },
+      {
+        "id": 2,
+        "user": {
+          "id": 17,
+          "name": `Emely`
+        },
+        "rating": 3,
+        "comment": `Poised to be an instant classic, almost everything about this film is phenomenal - the acting, the cinematography, the discography, etc.`,
+        "date": `2019-10-15T19:28:35.599Z`
+      }
+    ]
   },
   {
     title: `Gangs of new york`,
@@ -66,7 +114,20 @@ const films = [
     id: 3,
     isFavorite: false,
     videoLink: `http://media.xiph.org/mango/tears_of_steel_1080p.webm`,
-    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+
+    reviews: [
+      {
+        "id": 1,
+        "user": {
+          "id": 11,
+          "name": `Jack`
+        },
+        "rating": 4,
+        "comment": `This movie is just plain bad. There must be some big payola going round this awards season. Badly written, average acting at best, all the characters are unrelatable and inlikeable. 2 hours of my life wasted.`,
+        "date": `2019-10-12T19:28:35.599Z`
+      }
+    ]
   },
   {
     title: `What We Do in the Shadows`,
@@ -89,7 +150,30 @@ const films = [
     id: 4,
     isFavorite: false,
     videoLink: `http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4`,
-    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+
+    reviews: [
+      {
+        "id": 1,
+        "user": {
+          "id": 13,
+          "name": `Zak`
+        },
+        "rating": 4,
+        "comment": `This movie really touched my heart, it really is the best movie of the year and everyone should see this masterpiece.`,
+        "date": `2019-11-03T19:28:35.599Z`
+      },
+      {
+        "id": 2,
+        "user": {
+          "id": 13,
+          "name": `Zak`
+        },
+        "rating": 3,
+        "comment": `This movie is perfect in all its categories: credits, sound track, production, casting, writing, photography, editing, acting, and direction. I was amazed with the freedom of the use of the camera. This movie will change the way movies are made. Slow-mo, stills, black and white, and color were all used to brilliant effect.`,
+        "date": `2019-10-16T19:28:35.599Z`
+      }
+    ]
   },
   {
     title: `No Country for Old Men`,
@@ -112,7 +196,40 @@ const films = [
     id: 5,
     isFavorite: false,
     videoLink: `http://media.xiph.org/mango/tears_of_steel_1080p.webm`,
-    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+    previewVideoLink: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+
+    reviews: [
+      {
+        "id": 1,
+        "user": {
+          "id": 11,
+          "name": `Jack`
+        },
+        "rating": 4,
+        "comment": `A movie that will take you to another world full of emotions.`,
+        "date": `2019-10-22T19:28:35.599Z`
+      },
+      {
+        "id": 2,
+        "user": {
+          "id": 18,
+          "name": `Sophie`
+        },
+        "rating": 3,
+        "comment": `Unfortunately we don't have a reliable way to tell the true ratings of a movie.`,
+        "date": `2019-10-26T19:28:35.599Z`
+      },
+      {
+        "id": 3,
+        "user": {
+          "id": 14,
+          "name": `Corey`
+        },
+        "rating": 1,
+        "comment": `It was well acted, directed, and the music was good. But the story is yawn. Not trying to rip anybody but I checked my watch a dozen times during this movie.`,
+        "date": `2019-10-28T19:28:35.599Z`
+      }
+    ]
   },
 ];
 
