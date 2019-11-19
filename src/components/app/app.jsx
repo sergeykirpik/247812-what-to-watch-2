@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import MainScreen from '../main-screen/main-screen.jsx';
 import MoviePageDetails from '../movie-page-details/movie-page-details.jsx';
 
-const App = (props) => {
-  const {films} = props;
+export const App = (props) => {
+  const {films, genres} = props;
   switch (location.pathname) {
     case `/`:
-      return <MainScreen films={films} />;
+      return <MainScreen genres={genres} />;
     case `/details`:
       const filmId = parseInt(location.search.slice(1), 10);
       const film = films.find((it) => it.id === filmId);
@@ -19,11 +19,16 @@ const App = (props) => {
   return null;
 };
 
+App.defaultProps = {
+  genres: [`All genres`]
+};
+
 App.propTypes = {
   films: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     previewImage: PropTypes.string.isRequired,
   })),
+  genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 
 export default App;
