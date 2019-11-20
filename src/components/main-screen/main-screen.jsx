@@ -2,9 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MoviesList from '../movies-list/movies-list.jsx';
 import GenresList from '../genres-list/genres-list.jsx';
-import ShowMore from '../show-more/show-more.js';
+import ShowMore from '../show-more/show-more.jsx';
+import withActiveItem from '../../hocs/with-active-item/with-active-item.js';
 
-export const MainScreen = ({showMoreVisible, films, genres, genreFilter, onSelectGenre, onShowMoreCards}) => {
+const GenresListWrapped = withActiveItem(GenresList);
+const MoviesListWrapped = withActiveItem(MoviesList);
+
+export const MainScreen = ({showMoreVisible, films, genres, onSelectGenre, onShowMoreCards}) => {
   return (
     <>
       <section className="movie-card">
@@ -66,12 +70,11 @@ export const MainScreen = ({showMoreVisible, films, genres, genreFilter, onSelec
         <section className="catalog">
           <h2 className="catalog__title visually-hidden">Catalog</h2>
 
-          <GenresList
+          <GenresListWrapped
             genres={genres}
-            genreFilter={genreFilter}
-            onSelect={onSelectGenre} />
+            onSelectItem={onSelectGenre} />
 
-          <MoviesList films={films} />
+          <MoviesListWrapped films={films} />
 
           {showMoreVisible && <ShowMore onClick={onShowMoreCards} />}
 
@@ -104,7 +107,6 @@ const filmsPropType = PropTypes.arrayOf(PropTypes.shape({
 MainScreen.propTypes = {
   films: filmsPropType,
   genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  genreFilter: PropTypes.string.isRequired,
   showMoreVisible: PropTypes.bool.isRequired,
   onSelectGenre: PropTypes.func,
   onShowMoreCards: PropTypes.func,
@@ -112,7 +114,6 @@ MainScreen.propTypes = {
 
 MainScreen.defaultProps = {
   genres: [`All genres`],
-  genreFilter: `All genres`,
   showMoreVisible: false
 };
 
