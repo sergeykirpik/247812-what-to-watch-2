@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MoviesList from '../movies-list/movies-list.jsx';
 import GenresList from '../genres-list/genres-list.jsx';
+import ShowMore from '../show-more/show-more.js';
 
-export const MainScreen = ({films, genres, genreFilter, onSelectGenre}) => {
+export const MainScreen = ({showMoreVisible, films, genres, genreFilter, onSelectGenre, onShowMoreCards}) => {
   return (
     <>
       <section className="movie-card">
@@ -72,9 +73,8 @@ export const MainScreen = ({films, genres, genreFilter, onSelectGenre}) => {
 
           <MoviesList films={films} />
 
-          <div className="catalog__more">
-            <button className="catalog__button" type="button">Show more</button>
-          </div>
+          {showMoreVisible && <ShowMore onClick={onShowMoreCards} />}
+
         </section>
 
         <footer className="page-footer">
@@ -105,12 +105,15 @@ MainScreen.propTypes = {
   films: filmsPropType,
   genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   genreFilter: PropTypes.string.isRequired,
-  onSelectGenre: PropTypes.func
+  showMoreVisible: PropTypes.bool.isRequired,
+  onSelectGenre: PropTypes.func,
+  onShowMoreCards: PropTypes.func,
 };
 
 MainScreen.defaultProps = {
   genres: [`All genres`],
   genreFilter: `All genres`,
+  showMoreVisible: false
 };
 
 export default MainScreen;
