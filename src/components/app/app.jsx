@@ -7,14 +7,16 @@ import MoviePageDetails from '../movie-page-details/movie-page-details.jsx';
 import {ActionCreator} from '../../reducer.js';
 
 export const App = (props) => {
-  const {films, genres, genreFilter, filmsByGenre, onSelectGenre} = props;
+  const {films, genres, genreFilter, filmsByGenre, onSelectGenre, onShowMoreCards, showMoreVisible} = props;
   switch (location.pathname) {
     case `/`:
       return <MainScreen
         genres={genres}
         genreFilter={genreFilter}
         films={filmsByGenre}
-        onSelectGenre={onSelectGenre} />;
+        onSelectGenre={onSelectGenre}
+        onShowMoreCards={onShowMoreCards}
+        showMoreVisible={showMoreVisible} />;
     case `/details`:
       const filmId = parseInt(location.search.slice(1), 10);
       const film = films.find((it) => it.id === filmId);
@@ -28,7 +30,8 @@ export const App = (props) => {
 
 App.defaultProps = {
   genres: [`All genres`],
-  genreFilter: `All genres`
+  genreFilter: `All genres`,
+  showMoreVisible: false,
 };
 
 App.propTypes = {
@@ -39,18 +42,24 @@ App.propTypes = {
   genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   genreFilter: PropTypes.string.isRequired,
   filmsByGenre: PropTypes.arrayOf(PropTypes.object.isRequired),
-  onSelectGenre: PropTypes.func
+  showMoreVisible: PropTypes.bool.isRequired,
+  onSelectGenre: PropTypes.func,
+  onShowMoreCards: PropTypes.func
 };
 
 const mapStateToProps = (state) => ({
-  filmsByGenre: state.filmsByGenre,
-  genreFilter: state.genreFilter
+  filmsByGenre: state.filmsByGenre.slice(0, state.cardsShown),
+  genreFilter: state.genreFilter,
+  showMoreVisible: state.cardsShown < state.filmsByGenre.length,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onSelectGenre: (genre) => {
     dispatch(ActionCreator.setGenreFilter(genre));
     dispatch(ActionCreator.getFilmsByGenre(genre));
+  },
+  onShowMoreCards: () => {
+    dispatch(ActionCreator.showMoreCards());
   }
 });
 
