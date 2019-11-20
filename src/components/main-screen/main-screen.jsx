@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MoviesList from '../movies-list/movies-list.jsx';
+import GenresList from '../genres-list/genres-list.jsx';
 
-const MainScreen = ({films}) => {
+export const MainScreen = ({films, genres, genreFilter, onSelectGenre}) => {
   return (
     <>
       <section className="movie-card">
@@ -64,38 +65,10 @@ const MainScreen = ({films}) => {
         <section className="catalog">
           <h2 className="catalog__title visually-hidden">Catalog</h2>
 
-          <ul className="catalog__genres-list">
-            <li className="catalog__genres-item catalog__genres-item--active">
-              <a href="#" className="catalog__genres-link">All genres</a>
-            </li>
-            <li className="catalog__genres-item">
-              <a href="#" className="catalog__genres-link">Comedies</a>
-            </li>
-            <li className="catalog__genres-item">
-              <a href="#" className="catalog__genres-link">Crime</a>
-            </li>
-            <li className="catalog__genres-item">
-              <a href="#" className="catalog__genres-link">Documentary</a>
-            </li>
-            <li className="catalog__genres-item">
-              <a href="#" className="catalog__genres-link">Dramas</a>
-            </li>
-            <li className="catalog__genres-item">
-              <a href="#" className="catalog__genres-link">Horror</a>
-            </li>
-            <li className="catalog__genres-item">
-              <a href="#" className="catalog__genres-link">Kids & Family</a>
-            </li>
-            <li className="catalog__genres-item">
-              <a href="#" className="catalog__genres-link">Romance</a>
-            </li>
-            <li className="catalog__genres-item">
-              <a href="#" className="catalog__genres-link">Sci-Fi</a>
-            </li>
-            <li className="catalog__genres-item">
-              <a href="#" className="catalog__genres-link">Thrillers</a>
-            </li>
-          </ul>
+          <GenresList
+            genres={genres}
+            genreFilter={genreFilter}
+            onSelect={onSelectGenre} />
 
           <MoviesList films={films} />
 
@@ -122,12 +95,22 @@ const MainScreen = ({films}) => {
   );
 };
 
+const filmsPropType = PropTypes.arrayOf(PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  previewImage: PropTypes.string.isRequired,
+}).isRequired).isRequired;
+
 MainScreen.propTypes = {
-  films: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    previewImage: PropTypes.string.isRequired,
-  })),
+  films: filmsPropType,
+  genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  genreFilter: PropTypes.string.isRequired,
+  onSelectGenre: PropTypes.func
+};
+
+MainScreen.defaultProps = {
+  genres: [`All genres`],
+  genreFilter: `All genres`,
 };
 
 export default MainScreen;
