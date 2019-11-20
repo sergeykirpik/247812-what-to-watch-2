@@ -1,13 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+
 import MainScreen from '../main-screen/main-screen.jsx';
 import MoviePageDetails from '../movie-page-details/movie-page-details.jsx';
+import {ActionCreator} from '../../reducer.js';
 
 export const App = (props) => {
-  const {films, genres} = props;
+  const {films, genres, genreFilter, filmsByGenre, onSelectGenre} = props;
   switch (location.pathname) {
     case `/`:
-      return <MainScreen genres={genres} />;
+      return <MainScreen
+        genres={genres}
+        genreFilter={genreFilter}
+        films={filmsByGenre}
+        onSelectGenre={onSelectGenre} />;
     case `/details`:
       const filmId = parseInt(location.search.slice(1), 10);
       const film = films.find((it) => it.id === filmId);
@@ -20,7 +27,8 @@ export const App = (props) => {
 };
 
 App.defaultProps = {
-  genres: [`All genres`]
+  genres: [`All genres`],
+  genreFilter: `All genres`
 };
 
 App.propTypes = {
@@ -29,6 +37,21 @@ App.propTypes = {
     previewImage: PropTypes.string.isRequired,
   })),
   genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  genreFilter: PropTypes.string.isRequired,
+  filmsByGenre: PropTypes.arrayOf(PropTypes.object.isRequired),
+  onSelectGenre: PropTypes.func
 };
 
-export default App;
+const mapStateToProps = (state) => ({
+  filmsByGenre: state.filmsByGenre,
+  genreFilter: state.genreFilter
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onSelectGenre: (genre) => {
+    dispatch(ActionCreator.setGenreFilter(genre));
+    dispatch(ActionCreator.getFilmsByGenre(genre));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

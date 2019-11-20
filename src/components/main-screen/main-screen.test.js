@@ -7,7 +7,7 @@ import films from '../../mocks/films2';
 it(`renders correctly`, () => {
   const tree = renderer.create(
       <MainScreen
-        filmsByGenre={films} />
+        films={films} />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

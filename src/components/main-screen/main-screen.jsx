@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-
 import MoviesList from '../movies-list/movies-list.jsx';
 import GenresList from '../genres-list/genres-list.jsx';
 
-export const MainScreen = ({filmsByGenre, genres}) => {
+export const MainScreen = ({films, genres, genreFilter, onSelectGenre}) => {
   return (
     <>
       <section className="movie-card">
@@ -67,9 +65,12 @@ export const MainScreen = ({filmsByGenre, genres}) => {
         <section className="catalog">
           <h2 className="catalog__title visually-hidden">Catalog</h2>
 
-          <GenresList genres={genres} />
+          <GenresList
+            genres={genres}
+            genreFilter={genreFilter}
+            onSelect={onSelectGenre} />
 
-          <MoviesList films={filmsByGenre} />
+          <MoviesList films={films} />
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -101,16 +102,15 @@ const filmsPropType = PropTypes.arrayOf(PropTypes.shape({
 }).isRequired).isRequired;
 
 MainScreen.propTypes = {
-  filmsByGenre: filmsPropType,
+  films: filmsPropType,
   genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  genreFilter: PropTypes.string.isRequired,
+  onSelectGenre: PropTypes.func
 };
 
 MainScreen.defaultProps = {
-  genres: [`All genres`]
+  genres: [`All genres`],
+  genreFilter: `All genres`,
 };
 
-const mapStateToProps = (state) => ({
-  filmsByGenre: state.filmsByGenre,
-});
-
-export default connect(mapStateToProps)(MainScreen);
+export default MainScreen;

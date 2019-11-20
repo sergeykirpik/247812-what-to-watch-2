@@ -1,7 +1,7 @@
 import films from './mocks/films2';
 
 const initialState = {
-  genreFilter: `ALL GENRES`,
+  genreFilter: `All genres`,
   filmsByGenre: films
 };
 

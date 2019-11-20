@@ -1,15 +1,16 @@
-import {connect} from 'react-redux';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {ActionCreator} from '../../reducer';
 
-
-export const GenresList = ({genres, active, onSelect}) => {
+export const GenresList = ({genres, genreFilter, onSelect}) => {
+  const handleSelect = (e, genre) => {
+    e.preventDefault();
+    onSelect(genre);
+  };
   return (
     <ul className="catalog__genres-list">
       {genres.map((genre) => (
-        <li key={genre} className={`catalog__genres-item ${genre.toUpperCase() === active.toUpperCase() && `catalog__genres-item--active`}`}>
-          <a onClick={(e) => onSelect(e, genre)} href="#" className="catalog__genres-link">{genre}</a>
+        <li key={genre} className={`catalog__genres-item ${genre.toUpperCase() === genreFilter.toUpperCase() && `catalog__genres-item--active`}`}>
+          <a onClick={(e) => handleSelect(e, genre)} href="#" className="catalog__genres-link">{genre}</a>
         </li>
       ))}
     </ul>
@@ -18,20 +19,8 @@ export const GenresList = ({genres, active, onSelect}) => {
 
 GenresList.propTypes = {
   genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  active: PropTypes.string.isRequired,
+  genreFilter: PropTypes.string.isRequired,
   onSelect: PropTypes.func,
 };
 
-const mapStateToProps = (state) => ({
-  active: state.genreFilter,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  onSelect: (e, genre) => {
-    e.preventDefault();
-    dispatch(ActionCreator.setGenreFilter(genre));
-    dispatch(ActionCreator.getFilmsByGenre(genre));
-  }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(GenresList);
+export default GenresList;
