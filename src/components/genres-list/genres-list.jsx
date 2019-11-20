@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const GenresList = ({genres, genreFilter, onSelect}) => {
-  const handleSelect = (e, genre) => {
-    e.preventDefault();
-    onSelect(genre);
-  };
+const handleSelectItem = (e, genre, onSelectItem) => {
+  e.preventDefault();
+  onSelectItem(genre);
+};
+
+export const GenresList = (props) => {
+  const {genres, activeItem, onSelectItem} = props;
   return (
     <ul className="catalog__genres-list">
       {genres.map((genre) => (
-        <li key={genre} className={`catalog__genres-item ${genre.toUpperCase() === genreFilter.toUpperCase() && `catalog__genres-item--active`}`}>
-          <a onClick={(e) => handleSelect(e, genre)} href="#" className="catalog__genres-link">{genre}</a>
+        <li key={genre} className={`catalog__genres-item ${genre.toUpperCase() === (activeItem || `All genres`).toUpperCase() && `catalog__genres-item--active`}`}>
+          <a onClick={(e) => handleSelectItem(e, genre, onSelectItem)} href="#" className="catalog__genres-link">{genre}</a>
         </li>
       ))}
     </ul>
@@ -19,8 +21,12 @@ export const GenresList = ({genres, genreFilter, onSelect}) => {
 
 GenresList.propTypes = {
   genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  genreFilter: PropTypes.string.isRequired,
-  onSelect: PropTypes.func,
+  activeItem: PropTypes.string,
+  onSelectItem: PropTypes.func.isRequired,
+};
+
+GenresList.defaultProps = {
+  activeItem: `All genres`
 };
 
 export default GenresList;
