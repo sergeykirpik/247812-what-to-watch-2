@@ -4,10 +4,13 @@ import {connect} from 'react-redux';
 
 import MainScreen from '../main-screen/main-screen.jsx';
 import MoviePageDetails from '../movie-page-details/movie-page-details.jsx';
-import {ActionCreator} from '../../reducer.js';
+import {ActionCreator, getGenres, selectFilmsByGenre} from '../../reducer.js';
 
 export const App = (props) => {
   const {films, genres, genreFilter, filmsByGenre, onSelectGenre, onShowMoreCards, showMoreVisible} = props;
+  if (!films.length) {
+    return <p>Loading...</p>
+  }
   switch (location.pathname) {
     case `/`:
       return <MainScreen
@@ -48,15 +51,16 @@ App.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  filmsByGenre: state.filmsByGenre.slice(0, state.cardsShown),
+  films: state.films,
+  genres: getGenres(state),
+  filmsByGenre: selectFilmsByGenre(state),
   genreFilter: state.genreFilter,
-  showMoreVisible: state.cardsShown < state.filmsByGenre.length,
+  showMoreVisible: state.cardsShown < selectFilmsByGenre(state).length,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onSelectGenre: (genre) => {
     dispatch(ActionCreator.setGenreFilter(genre));
-    dispatch(ActionCreator.getFilmsByGenre(genre));
   },
   onShowMoreCards: () => {
     dispatch(ActionCreator.showMoreCards());

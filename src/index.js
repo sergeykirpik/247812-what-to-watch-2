@@ -1,25 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
+import {createStore, compose, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
+import thunk from 'redux-thunk';
 
 import App from './components/app/app.jsx';
 
-import films from './mocks/films2';
-import reducer from './reducer';
+import reducer, {Operation} from './reducer';
+
+import {configureAPI} from './api';
+
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
     reducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f
+    applyMiddleware(thunk.withExtraArgument(configureAPI()))
 );
 
-const getGenres = (allFilms) => {
-  return [`All genres`, ...new Set(allFilms.map((it) => it.genre))];
-};
+store.dispatch(Operation.getFilms());
 
 ReactDOM.render(
     <Provider store={store}>
-      <App films={films} genres={getGenres(films)}/>
+      <App />
     </Provider>,
     document.querySelector(`#root`)
 );
